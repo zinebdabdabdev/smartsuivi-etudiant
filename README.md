@@ -2,6 +2,7 @@
 
 Application web intelligente de suivi des étudiants, développée en **Java/Jakarta EE** et intégrant un service de **Machine Learning (Python/Flask)** pour la prédiction du niveau académique des étudiants.
 
+---
 
 ## 📋 Description du projet
 
@@ -13,7 +14,7 @@ d'apprentissage automatique entraîné sur un dataset réel.
 Le projet combine une **application web Java EE (MVC)** avec un **microservice Flask**
 exposant une API REST de prédiction.
 
-
+---
 
 ## 🚀 Fonctionnalités
 
@@ -24,20 +25,20 @@ exposant une API REST de prédiction.
 - 🗄️ Persistance des données dans une base MySQL
 - 🔗 Communication Java ↔ Python via une **API REST (JSON)**
 
-
+---
 
 ## 🛠️ Technologies utilisées
 
-| Composant        |             Technologies                             |
-___________________________________________________________________________
-| Backend Web      | Java / Jakarta EE (Servlets, JSP, MVC, JDBC)         |
-| Base de données  | MySQL                                                |
-| Machine Learning | Python, scikit-learn, pandas, numpy                  |
-| API ML           | Flask (REST API)                                     |
-| Modèle ML        | Random Forest Classifier (100 arbres)                |
-| Conception       | UML (cas d'utilisation, classes, séquence, activité) |
+| Composant | Technologies |
+| --- | --- |
+| Backend Web | Java / Jakarta EE (Servlets, JSP, MVC, JDBC) |
+| Base de données | MySQL |
+| Machine Learning | Python, scikit-learn, pandas, numpy |
+| API ML | Flask (REST API) |
+| Modèle ML | Random Forest Classifier (100 arbres) |
+| Conception | UML (cas d'utilisation, classes, séquence, activité) |
 
-
+---
 
 ## 🧠 Partie Machine Learning
 
@@ -47,7 +48,7 @@ ___________________________________________________________________________
 - **Pipeline** : `train_model.py` → entraînement + sauvegarde du modèle (`joblib`)
 - **API de prédiction** : `POST /predict` (Flask) retournant le niveau prédit en JSON
 
-python
+```python
 # Exemple d'appel à l'API
 POST http://localhost:5000/predict
 {
@@ -59,33 +60,33 @@ POST http://localhost:5000/predict
   "UtilisationTelephone": 3.0
 }
 # Réponse : {"niveau": "..."}
+```
 
-
-
+---
 
 ## ⚙️ Installation & Exécution
 
 ### 1. Base de données
 
-bash
+```bash
 mysql -u root -p < smartsuivi_db.sql
-
+```
 
 ### 2. Microservice ML (Flask)
 
-bash
+```bash
 cd machine_learning
 pip install -r requirements.txt
 python train_model.py   # entraîne le modèle
 python app.py           # lance l'API sur le port 5000
-
+```
 
 ### 3. Application Java EE
 
 - Déployer le projet sur **Apache Tomcat**
 - Configurer le connecteur **MySQL JDBC**
 
-
+---
 
 ## 📐 Conception UML
 
@@ -94,12 +95,13 @@ python app.py           # lance l'API sur le port 5000
 - Diagramme de séquence
 - Diagramme d'activité
 
-
+---
 
 ## 👩‍💻 Auteur
 
 **Zineb DABDAB** — Licence MIACSD (Mathématiques, Informatique Appliquée, Cybersécurité et Données)
 Université Sultan Moulay Slimane, Béni Mellal
 
+---
 
 *Mini-projet académique — Licence MIACSD*
